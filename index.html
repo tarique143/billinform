@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+      * {
+        color: black;
+        font-family: "Times New Roman", Times, serif;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      th {
+        padding-inline: 5px;
+      }
+
+      th,
+      td {
+        border: 1px solid #a8a8a8;
+        font-weight: 400;
+        text-align: center;
+        font-size: 18px;
+      }
+
+      th:nth-child(2),
+      td:nth-child(2) {
+        width: 300px;
+      }
+      td {
+        padding-block: 4px;
+      }
+
+      table textarea {
+        width: 100%;
+        border: none;
+        height: 20px;
+        border: none;
+        outline: none;
+        font-size: 18px;
+        padding-inline: 2px;
+        resize: none;
+        overflow: hidden;
+      }
+
+      table textarea::-webkit-scrollbar {
+        display: none;
+      }
+
+      th:first-child,
+      td:first-child {
+        width: 20px;
+      }
+      th:nth-child(3),
+      td:nth-child(3) {
+        width: 80px;
+      }
+      th:nth-child(4),
+      td:nth-child(4) {
+        width: 120px;
+      }
+
+      p {
+        font-size: 18px;
+      }
+      @media print {
+        button {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="max-w-[700px] mx-auto p-[20px]">
+      <h1 class="text-red-500 text-3xl text-center mb-2 font-[600]">
+        T.F.K ULTRA SONIC.
+      </h1>
+      <h1 class="text-red-500 text-3xl text-center mb-2 font-[600]">
+        MFG: JEWELLERY MACHINERY
+      </h1>
+      <p class="text-center mb-1">
+        Add- Andheri (E). Saki Naka Safed Pull, Nr. HP Petrol Pump Mumbai 400072
+      </p>
+      <p class="text-center mb-1">Maharashtra, India.</p>
+      <p class="text-center mb-2">Contact: 8898542768</p>
+      <p class="text-left mb-1">To,</p>
+      <p class="text-left mb-1">M/s. Jagan anna,</p>
+      <p class="text-left mb-1">Visokarma street Warangal</p>
+      <p class="text-left mb-1">Pin code: 506002.</p>
+      <table class="mt-5 w-full min-w-[650px]">
+        <tr>
+          <th>Sr.No</th>
+          <th>Particulars</th>
+          <th>Quantity</th>
+          <th>Price</th>
+        </tr>
+        <tr>
+          <td><textarea></textarea></td>
+          <td><textarea></textarea></td>
+          <td><textarea></textarea></td>
+          <td><textarea></textarea></td>
+        </tr>
+        <tr>
+          <td><textarea></textarea></td>
+          <td><textarea></textarea></td>
+          <td><textarea></textarea></td>
+          <td><textarea></textarea></td>
+        </tr>
+        <tr>
+          <td><textarea></textarea></td>
+          <td><textarea></textarea></td>
+          <td><textarea></textarea></td>
+          <td><textarea></textarea></td>
+        </tr>
+        <tr>
+          <td><textarea></textarea></td>
+          <td><textarea></textarea></td>
+          <td><textarea></textarea></td>
+          <td><textarea></textarea></td>
+        </tr>
+        <tr>
+          <td><textarea></textarea></td>
+          <td><textarea></textarea></td>
+          <td><textarea></textarea></td>
+          <td><textarea></textarea></td>
+        </tr>
+        <tr>
+          <td><textarea></textarea></td>
+          <td><textarea></textarea></td>
+          <td><textarea></textarea></td>
+          <td><textarea></textarea></td>
+        </tr>
+        <tr>
+          <td><textarea></textarea></td>
+          <td><textarea></textarea></td>
+          <td><textarea></textarea></td>
+          <td><textarea></textarea></td>
+        </tr>
+        <tr>
+          <td><textarea></textarea></td>
+          <td><textarea></textarea></td>
+          <td><textarea></textarea></td>
+          <td><textarea></textarea></td>
+        </tr>
+        <tr>
+          <td><textarea></textarea></td>
+          <td><textarea></textarea></td>
+          <td><textarea></textarea></td>
+          <td><textarea></textarea></td>
+        </tr>
+        <tr>
+          <td><textarea></textarea></td>
+          <td><textarea></textarea></td>
+          <td><textarea></textarea></td>
+          <td><textarea></textarea></td>
+        </tr>
+        <tr>
+          <td><textarea></textarea></td>
+          <td><textarea></textarea></td>
+          <td><textarea></textarea></td>
+          <td><textarea></textarea></td>
+        </tr>
+        <tr>
+          <td><textarea></textarea></td>
+          <td><textarea></textarea></td>
+          <td><textarea></textarea></td>
+          <td><textarea></textarea></td>
+        </tr>
+        <tr>
+          <td><textarea></textarea></td>
+          <td><textarea></textarea></td>
+          <td><textarea></textarea></td>
+          <td><textarea></textarea></td>
+        </tr>
+        <tr>
+          <td><textarea></textarea></td>
+          <td><textarea></textarea></td>
+          <td><textarea></textarea></td>
+          <td><textarea></textarea></td>
+        </tr>
+      </table>
+      <button
+        id="printBtn"
+        type="button"
+        class="bg-[crimson] cursor-pointer transition my-5 px-5 py-2 text-white rounded"
+      >
+        Print
+      </button>
+      <p class="text-right mt-5">For T.F.K- ULTRA SONIC.</p>
+    </div>
+    <script>
+      const printBtn = document.querySelector("button#printBtn");
+      printBtn.onclick = printPage;
+      function printPage() {
+        window.print();
+      }
+
+      function fillSrNo() {
+        const tableRows = document.querySelectorAll("table tbody tr");
+        tableRows.forEach((row, index) => {
+          if (index != 0) {
+            const serialNumberCell = row.querySelector(
+              "td:first-child textarea"
+            );
+            console.log(serialNumberCell);
+            serialNumberCell.value = index;
+          }
+        });
+      }
+
+      fillSrNo();
+
+      document.querySelectorAll("table textarea").forEach((textarea) => {
+        textarea.addEventListener("input", function (event) {
+          let lines = this.value.split("\n").length;
+          event.target.style.height = lines * 22 + "px";
+        });
+      });
+    </script>
+  </body>
+</html>
