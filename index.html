@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Billilng system</title>
     <link rel="stylesheet" href="./style.css" />
     <style>
       * {
@@ -71,6 +71,10 @@
         button {
           display: none;
         }
+        .userdetails-input {
+          border: none;
+          padding: 0;
+        }
       }
     </style>
   </head>
@@ -83,14 +87,21 @@
         MFG: JEWELLERY MACHINERY
       </h1>
       <p class="text-center mb-1">
-        Add- Andheri (E). Saki Naka Safed Pull, Nr. HP Petrol Pump Mumbai 400072
+        Add- Andheri (E). Saki Naka Safed Pull, Nr. HP Petrol Pump Mumbai Pin
+        Code 400072
       </p>
       <p class="text-center mb-1">Maharashtra, India.</p>
       <p class="text-center mb-2">Contact: 8898542768</p>
       <p class="text-left mb-1">To,</p>
-      <p class="text-left mb-1">M/s. Jagan anna,</p>
-      <p class="text-left mb-1">Visokarma street Warangal</p>
-      <p class="text-left mb-1">Pin code: 506002.</p>
+      <p class="text-left mb-1">
+        <input class="border outline-none px-2 userdetails-input" type="text" />
+      </p>
+      <p class="text-left mb-1">
+        <input class="border outline-none px-2 userdetails-input" type="text" />
+      </p>
+      <p class="text-left mb-1">
+        <input class="border outline-none px-2 userdetails-input" type="text" />
+      </p>
       <table class="mt-5 w-full min-w-[650px]">
         <tr>
           <th>Sr.No</th>
@@ -178,8 +189,9 @@
         </tr>
         <tr>
           <td><textarea></textarea></td>
-          <td><textarea></textarea></td>
-          <td><textarea></textarea></td>
+          <td colspan="2">
+            <textarea class="bg-white" disabled>Grand Total : </textarea>
+          </td>
           <td><textarea></textarea></td>
         </tr>
       </table>
